@@ -22,44 +22,37 @@ import javafx.stage.Stage;
  * @author danecek
  */
 public class GridPaneLayout extends Application {
-    
+
     public GridPane createGridPane() {
-    GridPane grid = new GridPane();
-    grid.setHgap(10);
-    grid.setVgap(10);
-    grid.setPadding(new Insets(10));
-    Text text = new Text("Text");
-    grid.add(text, 0, 0); 
-    Label label = new Label("Label");
-    grid.add(label, 1, 1);
-    Button btn = new Button("Button");
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(10));
+        Text text = new Text("Text");
+        grid.add(text, 0, 0);
+        Label label = new Label("Label");
+        grid.add(label, 1, 1);
+        Button btn = new Button("Button");
 //    btn.setCenterShape(true);
 //    btn.setAlignment(Pos.CENTER);
-    btn.setMaxWidth(Double.MAX_VALUE);
-    grid.add(btn, 0, 2, 2, 1);
-    grid.setGridLinesVisible(true);
-    return grid;
-}
+        btn.setMaxWidth(Double.MAX_VALUE);
+        grid.add(btn, 0, 2, 2, 1);
+        grid.setGridLinesVisible(true);
+        return grid;
+    }
 
-
-    
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
+        btn.setOnAction((ActionEvent event) -> {
+            System.out.println("Hello World!");
         });
-        
         StackPane root = new StackPane();
         root.getChildren().add(btn);
-        
+
         Scene scene = new Scene(createGridPane(), 300, 250);
-        
+
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -71,5 +64,5 @@ public class GridPaneLayout extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }
