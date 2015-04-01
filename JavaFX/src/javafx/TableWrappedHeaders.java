@@ -22,20 +22,16 @@ public class TableWrappedHeaders extends Application {
     @Override
     public void start(Stage stage) {
         TableColumn firstNameCol = new TableColumn("Name");
-        firstNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("name"));
+        firstNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         TableColumn lastNameCol = new TableColumn("E-mail");
         lastNameCol.setPrefWidth(100);
-        lastNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("email"));
+        lastNameCol.setCellValueFactory(new PropertyValueFactory<>("email"));
 
         TableView table = new TableView();
         table.getColumns().addAll(firstNameCol, lastNameCol);
         table.setItems(FXCollections.observableArrayList(
                 new Person("Jacob", "Smith"),
-                new Person("Isabella", "Johnson"), new Person("Isabella", "Johnson"),
-                new Person("Isabella", "Johnson"), new Person("Isabella", "Johnson"),
-                new Person("Isabella", "Johnson"), new Person("Isabella", "Johnson"),
-                new Person("Isabella", "Johnson"), new Person("Isabella", "Johnson"),
-                new Person("Isabella", "Johnson"),
+                new Person("Isabella", "Johnson"), 
                 new Person("Ethan", "Williams")
         ));
         table.setPrefSize(250, 200);
