@@ -7,7 +7,6 @@ package javafx;
 
 import javafx.application.Application;
 
-
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -23,7 +22,6 @@ public class JavaFX extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        // TODO code application logic here
     }
 
     @Override
@@ -31,12 +29,9 @@ public class JavaFX extends Application {
 
         primaryStage.setTitle("Hello World");
         Scene s = new Scene(new Label("Hello"), 800, 600);
-        //    s.setCamera(null);
         primaryStage.setScene(s);
         primaryStage.centerOnScreen();
         primaryStage.show();
-        //  primaryStage.set
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
