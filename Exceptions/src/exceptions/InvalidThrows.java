@@ -9,7 +9,7 @@ package exceptions;
  *
  * @author danecek
  */
-public class Exceptions {
+public class InvalidThrows {
 
     @Override
     public String toString() throws Exception {
