@@ -50,6 +50,7 @@ public class EvalPI implements Callable<Double> {
             es = Executors.newCachedThreadPool();
             Future<Double> f = es.submit(new EvalPI(10000000l, 5000));
             while (!f.isDone()) {
+                Thread.sleep(200);
                 System.out.println("EvalPI is stillrunning");
             }   
             System.out.println(f.get());
