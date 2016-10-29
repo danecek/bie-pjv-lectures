@@ -11,6 +11,8 @@ public class Lambda {
 
     public static void main(String[] args) {
         IntToDoubleFunction sqrt = (int x) -> Math.sqrt(x);
+        //   Object sqrt3 = (int x) -> Math.sqrt(x);
+        Object sqrt3 = (IntToDoubleFunction) (int x) -> Math.sqrt(x);
         IntToDoubleFunction sqrt2 = new IntToDoubleFunction() {
             @Override
             public double applyAsDouble(int x) {
@@ -21,3 +23,4 @@ public class Lambda {
         };
 
     }
+}
