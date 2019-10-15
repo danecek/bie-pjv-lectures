@@ -40,3 +40,12 @@
 /FXMLTableView/nbproject/private/
 /FXMLTableView/build/
 /FXMLTableView/dist/
+/MultiModule/GUIModule/target/
+/MultiModule/DataModule/target/
+/MultiModule/mavenproject1/target/
+/MultiModule/api/target/
+/MultiModule/gui/target/
+/moduleapp/api/target/
+/moduleapp/gui/target/
+/ModuleApp/api/target/
+/ModuleApp/gui/target/

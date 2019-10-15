@@ -1,0 +1,2 @@
+--output dist -p api/target/api-1.0.jar:gui/target/gui-1.0.jar --add-modules moduleapp.api,moduleapp.gui --launcher moduleapplauncher=moduleapp.gui/moduleapp.gui.Main
+
