@@ -30,6 +30,5 @@ public class ArrayIterator implements Iterator<Integer> {
         for (Iterator i = new ArrayIterator(new int[]{1, 4, 8}); i.hasNext();) {
             System.out.println(i.next());
         }
-        // TODO code application logic here
     }
 }
