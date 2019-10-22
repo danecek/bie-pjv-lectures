@@ -1,6 +1,7 @@
 package moduleapp.gui;
 
 import java.awt.Font;
+import java.lang.module.ModuleDescriptor;
 import java.lang.module.ModuleFinder;
 import java.lang.module.ModuleReference;
 import java.nio.file.Path;
@@ -26,11 +27,11 @@ public class Main extends JFrame {
         Path dir1 = Path.of("/home/danecek/Vyuka/BIE-PJV/bie-pjv-lectures/ModuleApp/api/target/api-1.0.jar");
         ModuleFinder finder = ModuleFinder.of(dir1);
         Optional<ModuleReference> omref = finder.find("moduleapp.api");
-        var d = omref.get().descriptor();
-        System.out.println(d.name());
-        System.out.println(d.version());
-        System.out.println(d.provides());
-        System.out.println(d.requires());
+        ModuleDescriptor md = omref.get().descriptor();
+        System.out.println(md.name());
+        System.out.println(md.version());
+        System.out.println(md.provides());
+        System.out.println(md.requires());
         new Main();
     }
 }
